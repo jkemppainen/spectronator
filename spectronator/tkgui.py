@@ -120,12 +120,16 @@ class OperationPanel(tk.Frame):
                                470, 485, 518, 534, 544, 560, 576,
                                590, 618, 629, 680, 693])
         
-        self.highpass_slider.config(to=self.spectronator.max_fs)
+        self.highpass_slider.config(to=self.spectronator.max_fs/2-1)
         self.refresh_tvs()
 
     def refresh_tvs(self, *args):
 
         self.tv1.clear()
+        
+        if not self.spectronator.data:
+            return
+
         fig, ax = self.tv1.plotter.get_figax()
         ax.set_xlabel('Time (s)')
         ax.set_ylabel('Voltage (mV)')
@@ -140,6 +144,10 @@ class OperationPanel(tk.Frame):
     def refresh_tv2(self, *args):
 
         self.tv2.clear()
+        
+        if not self.spectronator.data:
+            return
+
         fig, ax = self.tv2.plotter.get_figax()
         ax.set_xlabel('Time (s)')
         ax.set_ylabel('Voltage (mV)')
@@ -177,6 +185,10 @@ class OperationPanel(tk.Frame):
     def refresh_tv3(self, *args, XY=None):
         
         self.tv3.clear()
+
+        if not self.spectronator.data:
+            return
+
         fig, ax = self.tv3.plotter.get_figax()
         ax.set_xlabel('Time (s)')
         ax.set_ylabel('Response (mV)')
