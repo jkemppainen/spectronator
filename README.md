@@ -15,14 +15,31 @@ Features
 - Spectral responsivness plotting
 - Export to CSV and PNG
 
-## Installing
 
-```
+## Installing and launching
+
+Select one of the following.
+
+## A) All-in-one installer (Windows only)
+TBA...
+
+## B) Python standard
+
+To install, open the command-line and type in
+
+```bash
 pip install spectronator
 ```
 
-## Launching
+Then you can launch via the command-line by
 
-```
+```bash
 python -m spectronator.tkgui
+```
+
+or alternatively via the Python interpreter by
+
+```python
+import spectronator.tkgui
+spectronator.tkgui.main()
 ```
