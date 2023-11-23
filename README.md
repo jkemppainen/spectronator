@@ -20,8 +20,11 @@ Features
 
 Select one of the following.
 
-## A) All-in-one installer (Windows only)
-TBA...
+## A) All-in-one executables (Windows only)
+
+Available the [Releases](https://github.com/jkemppainen/spectronator/releases) section.
+Download and double-click, no installation required.
+
 
 ## B) Python standard
 
